@@ -1,0 +1,339 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #00bcd4; /* Cyan/Teal */
+  --ifm-color-primary-dark: #00acc1;
+  --ifm-color-primary-darker: #0097a7;
+  --ifm-color-primary-darkest: #006064;
+  --ifm-color-primary-light: #26c6da;
+  --ifm-color-primary-lighter: #4dd0e1;
+  --ifm-color-primary-lightest: #80deea;
+
+  --ifm-color-secondary: #673ab7; /* Deep Purple */
+  --ifm-color-secondary-dark: #5e35b1;
+  --ifm-color-secondary-darker: #512da8;
+  --ifm-color-secondary-darkest: #311b92;
+  --ifm-color-secondary-light: #7e57c2;
+  --ifm-color-secondary-lighter: #9575cd;
+  --ifm-color-secondary-lightest: #b39ddb;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #00bcd4;
+  --ifm-color-primary-dark: #00acc1;
+  --ifm-color-primary-darker: #0097a7;
+  --ifm-color-primary-darkest: #006064;
+  --ifm-color-primary-light: #26c6da;
+  --ifm-color-primary-lighter: #4dd0e1;
+  --ifm-color-primary-lightest: #80deea;
+
+  --ifm-color-secondary: #5922b8;
+  --ifm-color-secondary-dark: #5e35b1;
+  --ifm-color-secondary-darker: #512da8;
+  --ifm-color-secondary-darkest: #311b92;
+  --ifm-color-secondary-light: #7e57c2;
+  --ifm-color-secondary-lighter: #9575cd;
+  --ifm-color-secondary-lightest: #6517f5;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-background-color: #1a1a2e; /* Darker background */
+  --ifm-background-surface-color: #1c4dd4; /* Slightly lighter for cards/sections */
+  --ifm-font-color-base: #e0e0e0; /* Light text */
+  --ifm-hero-background-color: #1866c6; /* Dark blue for hero */
+}
+
+/* Custom styles for homepage components */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--ifm-hero-background-color), var(--ifm-color-primary));
+  color: var(--ifm-font-color-base);
+}
+
+.heroBanner h1 {
+  color: var(--ifm-color-primary-lightest);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.heroBanner p {
+  color: var(--ifm-font-color-base);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.heroBanner .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.heroBanner .button {
+  margin: 0.5rem;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.heroBanner .button--primary {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+}
+
+.heroBanner .button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.heroBanner .button--secondary {
+  background-color: var(--ifm-color-secondary);
+  color: white;
+  border: none;
+}
+
+.heroBanner .button--secondary:hover {
+  background-color: var(--ifm-color-secondary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.homepageContent {
+  padding: 4rem 0;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: var(--ifm-color-secondary-light);
+}
+
+.moduleCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.moduleCard {
+  flex: 0 0 calc(25% - 2rem); /* 4 cards per row, accounting for gap */
+  max-width: calc(25% - 2rem);
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.moduleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.moduleCard h3 {
+  color: var(--ifm-color-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.moduleCard p {
+  font-size: 1rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* Roadmap styles */
+.roadmap {
+  margin-bottom: 4rem;
+}
+
+.roadmapSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.roadmapStep {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--ifm-background-surface-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.roadmapStep:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.roadmapStep .stepNumber {
+  width: 40px;
+  height: 40px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.roadmapStep .stepContent h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-primary-light);
+  font-size: 1.3rem;
+}
+
+.roadmapStep .stepContent p {
+  margin: 0;
+  color: var(--ifm-font-color-base);
+}
+
+.learningOutcomesGrid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+}
+
+.learningOutcomesGrid li {
+  background-color: var(--ifm-background-surface-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--ifm-font-color-base);
+  transition: transform 0.3s ease-in-out;
+}
+
+.learningOutcomesGrid li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.comingSoonSection {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.comingSoonButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.comingSoonButtons .button {
+  margin: 0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--ifm-color-secondary);
+  color: white;
+  border: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.comingSoonButtons .button:hover {
+  transform: none; /* Disable hover effect for disabled buttons */
+  opacity: 0.8;
+}
+
+/* Responsiveness */
+@media (max-width: 996px) {
+  .moduleCard {
+    flex: 0 0 calc(50% - 1.5rem);
+    max-width: calc(50% - 1.5rem);
+  }
+
+  .roadmapSteps {
+    gap: 1rem;
+  }
+
+  .roadmapStep {
+    flex-direction: column;
+  }
+
+  .roadmapStep .stepNumber {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBanner h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroBanner p {
+    font-size: 1rem;
+  }
+
+  .heroBanner .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .moduleCard {
+    flex: 0 0 calc(100% - 1rem);
+    max-width: calc(100% - 1rem);
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .roadmapStep {
+    padding: 1rem;
+  }
+
+  .learningOutcomesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .comingSoonButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
