@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--primary button--lg"
             to="/docs/quarter-overview">
-            Start the Quarter
+            Start Reading
           </Link>
           <button
             className="button button--secondary button--lg"
@@ -119,7 +119,7 @@ function HomepageContent() {
         <div className={styles.comingSoonSection}>
           <div className={styles.comingSoonButtons}>
             <button className="button button--secondary" onClick={() => console.log('Ask AI about this book clicked')} disabled>
-              Ask AI about this book
+              ChatBot
             </button>
             <button className="button button--secondary" onClick={() => console.log('Personalize later clicked')} disabled>
               Personalize
