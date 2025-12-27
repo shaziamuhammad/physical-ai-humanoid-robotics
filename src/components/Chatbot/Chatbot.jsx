@@ -1,3 +1,4 @@
+// physical-ai-humanoid-robotics\src\components\Chatbot\Chatbot.jsx
 import React, { useState, useEffect } from 'react';
 import './Chatbot.css';
 
@@ -100,7 +101,7 @@ const Chatbot = ({ chapterId }) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8000/chat', {
+      const response = await fetch('https://shaziabashir-rag-chatbot.hf.space/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -162,7 +163,7 @@ const Chatbot = ({ chapterId }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/embed', {
+      const response = await fetch('/embed', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
