@@ -1,3 +1,4 @@
+# physical-ai-humanoid-robotics\backend\chat.py
 """
 Chat module for RAG Chatbot
 Handles proxying requests to external Hugging Face RAG backend
